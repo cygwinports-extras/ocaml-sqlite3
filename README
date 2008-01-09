@@ -1,0 +1,70 @@
+ocaml-sqlite3
+------------------------------------------
+SQLite 3 database library wrapper for OCaml.
+
+This wrapper is written in a way that enables a friendly coexistence
+with the old (version 2) sqlite and its OCaml wrapper ocaml-sqlite.
+
+Runtime requirements:
+  cygwin-1.5.25-7
+  libsqlite3_0-3.5.3-1
+  ocaml-3.10.0-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.25-7
+  binutils-20060817-1
+  cygport-0.3.8-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  make-3.81-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://www.ocaml.info/home/ocaml_sources.html
+
+Canonical download:
+  http://www.ocaml.info/ocaml_sources/
+
+-------------------------------------------
+
+Build instructions:
+  unpack ocaml-sqlite3-0.23.0-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./ocaml-sqlite3-0.23.0-X.cygport all
+
+This will create:
+  /usr/src/ocaml-sqlite3-0.23.0-X-src.tar.bz2
+  /usr/src/ocaml-sqlite3-0.23.0-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/sqlite3top
+  /usr/lib/ocaml/sqlite3/META
+  /usr/lib/ocaml/sqlite3/libsqlite3_stubs.a
+  /usr/lib/ocaml/sqlite3/sqlite3.a
+  /usr/lib/ocaml/sqlite3/sqlite3.cma
+  /usr/lib/ocaml/sqlite3/sqlite3.cmi
+  /usr/lib/ocaml/sqlite3/sqlite3.cmx
+  /usr/lib/ocaml/sqlite3/sqlite3.cmxa
+  /usr/lib/ocaml/sqlite3/sqlite3.mli
+  /usr/lib/ocaml/stublibs/dllsqlite3_stubs.so
+  /usr/share/doc/ocaml-sqlite3-0.23.0/COPYING
+  /usr/share/doc/ocaml-sqlite3-0.23.0/Changes
+  /usr/share/doc/ocaml-sqlite3-0.23.0/README
+  /usr/share/doc/ocaml-sqlite3-0.23.0/TODO
+
+------------------
+
+Port Notes:
+
+----- version 0.23.0-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/

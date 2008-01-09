@@ -1,0 +1,20 @@
+ORIG_PN="${PN}"
+inherit ocaml
+
+DESCRIPTION="OCaml SQLite3 bindings"
+HOMEPAGE="http://www.ocaml.info/home/ocaml_sources.html"
+SRC_URI="http://www.ocaml.info/ocaml_sources/${P}.tar.bz2"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygconf
+	cygmake -j1
+}
+
+src_install() {
+	cd ${B}
+	dodir /usr/bin
+	USE_DESTDIR=0
+	ocaml_install
+}
