@@ -1,9 +1,10 @@
-ORIG_PN="${PN}"
 inherit ocaml
 
 DESCRIPTION="OCaml SQLite3 bindings"
 HOMEPAGE="http://www.ocaml.info/home/ocaml_sources.html"
-SRC_URI="http://www.ocaml.info/ocaml_sources/${P}.tar.bz2"
+SRC_URI="http://hg.ocaml.info/release/${PN}/archive/release-${PV}.tar.bz2"
+SRC_DIR="${PN}-release-${PV}"
+PATCH_URI="1.6.1-build.patch"
 
 src_compile() {
 	lndirs
