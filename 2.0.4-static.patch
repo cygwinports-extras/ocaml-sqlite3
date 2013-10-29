@@ -1,0 +1,19 @@
+--- origsrc/postgresql-ocaml-2.0.4/setup.ml	2013-07-08 13:32:08.000000000 -0500
++++ src/postgresql-ocaml-2.0.4/setup.ml	2013-10-29 17:09:33.537095300 -0500
+@@ -1582,8 +1582,6 @@ module OASISLibrary = struct
+         begin
+           ["lib"^cs.cs_name^"_stubs"^ext_lib]
+           ::
+-          ["dll"^cs.cs_name^"_stubs"^ext_dll]
+-          ::
+           acc_nopath
+         end
+       else
+@@ -4665,7 +4663,6 @@ module InternalConfigurePlugin = struct
+           var_ignore_eval BaseStandardVar.flexlink
+         with e ->
+           warn_exception e;
+-          add_errors (f_ "Cannot find 'flexlink'")
+       end;
+ 
+     (* Check build depends *)

@@ -1,23 +1,25 @@
 inherit ocaml
 
 NAME="ocaml-sqlite3"
-VERSION=1.6.1
+VERSION=2.0.4
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="OCaml SQLite3 bindings"
 DESCRIPTION="SQLite 3 database library wrapper for OCaml. This wrapper is
 written in a way that enables a friendly coexistence with the old (version 2)
 sqlite and its OCaml wrapper ocaml-sqlite."
-HOMEPAGE="http://www.ocaml.info/home/ocaml_sources.html"
-SRC_URI="http://hg.ocaml.info/release/${NAME}/archive/release-${VERSION}.tar.bz2"
-SRC_DIR="${NAME}-release-${VERSION}"
-PATCH_URI="1.6.1-build.patch"
+HOMEPAGE="http://www.ocaml.info/software.html"
+SRC_URI="https://bitbucket.org/mmottl/sqlite3-ocaml/downloads/sqlite3-ocaml-${VERSION}.tar.gz"
+SRC_DIR="sqlite3-ocaml-${VERSION}"
+#PATCH_URI="1.6.1-build.patch"
+if defined ARCH_x86_64; then
+PATCH_URI="2.0.4-static.patch"
+fi
 
 src_compile() {
 	lndirs
 	cd ${B}
-	cygconf
-	cygmake -j1
+	cygmake
 }
 
 src_install() {
